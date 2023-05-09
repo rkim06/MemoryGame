@@ -3,11 +3,9 @@ public class Player {
     private int numPoints;
     private double time;
 
-    public Player(String name){
-        this.name = name;
-    }
-    public Player(String name, int numPoints){
-        this.name = name;
+    public Player(int numPoints){
+        // Figure out whole user input sitch
+        this.name = "player 1";
         this.numPoints = numPoints;
     }
 
@@ -18,4 +16,10 @@ public class Player {
     public void increasePoint(){
         numPoints++;
     }
+
+    public int getNumPoints(){
+        return numPoints;
+    }
 }
+
+
