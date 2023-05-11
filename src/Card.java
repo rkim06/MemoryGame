@@ -31,17 +31,24 @@ public class Card extends JFrame {
     public void cardClicked(){
         currentImg = cardImg;
     }
-    public void switchCardImg(){
 
-    }
-
-    // If the card is turned over, then isClicked = true
-    public boolean isClicked(){
-        if(currentImg == cardImg){
+    // If the card is clicked to reveal the current Img
+    public boolean isClicked() {
+        if (currentImg == cardImg) {
+            currentImg = cardBack;
             return true;
         }
+        currentImg = cardImg;
         return false;
     }
+
+    public void setFront(){
+        currentImg = cardImg;
+    }
+    public void setBack(){
+        currentImg = cardBack;
+    }
+
     // If the card's pair has been found, return true
     // Used to then clear off the screen (aka cover with white rectangle)
     public boolean solved(){
@@ -49,7 +56,7 @@ public class Card extends JFrame {
     }
 
     public void printImg(Graphics g){
-        g.drawImage(currentImg, xCoord, yCoord, this);
+        g.drawImage(currentImg, xCoord, yCoord,140, 140, this);
     }
 
 }

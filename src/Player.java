@@ -1,6 +1,6 @@
 public class Player {
     private String name;
-    private int numPoints;
+    private static int numPoints;
     private double time;
 
     public Player(int numPoints){
@@ -13,7 +13,7 @@ public class Player {
         return name;
     }
 
-    public void increasePoint(){
+    public void increasePoints(){
         numPoints++;
     }
 
